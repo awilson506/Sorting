@@ -28,6 +28,12 @@ public class Driver {
 		runTime = (( endTime - startTime ));
 		System.out.println("Runtime for Insertion Sort was: " + runTime);
 		
+		startTime = System.currentTimeMillis();
+		QuickSort.quicksort(integers);
+		endTime = System.currentTimeMillis();
+		runTime = (( endTime - startTime ));
+		System.out.println("Runtime for Quick Sort was: " + runTime);
+		
 	}
 
 }
