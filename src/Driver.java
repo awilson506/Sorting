@@ -6,7 +6,6 @@ public class Driver {
 
 	public static final void main(String... aArgs) {
 		
-		//RandomInteger.createFile();
 		long startTime;
 		long endTime;
 		long runTime;
@@ -27,7 +26,7 @@ public class Driver {
 		InsertionSort.insertionSort(integers);
 		endTime = System.currentTimeMillis();
 		runTime = (( endTime - startTime ));
-		System.out.println(runTime);
+		System.out.println("Runtime for Insertion Sort was: " + runTime);
 		
 	}
 

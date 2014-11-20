@@ -15,12 +15,6 @@ public class InsertionSort {
 			}
 			x.set(position, temp);
 		}
-//		int count = 0;
-//		for(Integer token : x){
-//			System.out.println(token);
-//			count++;
-//		}
-//		System.out.println(count + "count");
 	}
 
 }
