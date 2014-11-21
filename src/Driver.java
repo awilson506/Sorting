@@ -4,11 +4,31 @@ import java.util.Scanner;
 
 public class Driver {
 
-	public static final void main(String... aArgs) {
+	public static final void main(String[] args) {
 		
 		long startTime;
 		long endTime;
 		long runTime;
+		ArrayList<Integer> integers;
+		
+		integers = loadArray();
+		startTime = System.currentTimeMillis();
+		InsertionSort.insertionSort(integers);
+		endTime = System.currentTimeMillis();
+		runTime = (( endTime - startTime ));
+		System.out.println("Runtime for Insertion Sort was: " + runTime);
+		
+		integers = loadArray();
+		startTime = System.currentTimeMillis();
+		QuickSort.quicksort(integers);
+		endTime = System.currentTimeMillis();
+		runTime = (( endTime - startTime ));
+		System.out.println("Runtime for Quick Sort was: " + runTime);
+		
+	}
+	
+	public static ArrayList<Integer> loadArray(){
+		
 		ArrayList<Integer> integers = new ArrayList<Integer>();
 		
 		try {
@@ -19,21 +39,11 @@ public class Driver {
 				integers.add(sc.nextInt());
 			}
 			sc.close();
+			
 		} catch (Exception e) {
 
 		}
-		startTime = System.currentTimeMillis();
-		InsertionSort.insertionSort(integers);
-		endTime = System.currentTimeMillis();
-		runTime = (( endTime - startTime ));
-		System.out.println("Runtime for Insertion Sort was: " + runTime);
-		
-		startTime = System.currentTimeMillis();
-		QuickSort.quicksort(integers);
-		endTime = System.currentTimeMillis();
-		runTime = (( endTime - startTime ));
-		System.out.println("Runtime for Quick Sort was: " + runTime);
-		
+		return integers;
 	}
 
 }
