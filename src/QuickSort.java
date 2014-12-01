@@ -25,10 +25,10 @@ public class QuickSort {
 			}
 		}
 
-		return concatenate(quicksort(less), pivot, quicksort(greater));
+		return join(quicksort(less), pivot, quicksort(greater));
 	}
 
-	private static ArrayList<Integer> concatenate(ArrayList<Integer> less,
+	private static ArrayList<Integer> join(ArrayList<Integer> less,
 			int pivot, ArrayList<Integer> greater) {
 
 		ArrayList<Integer> list = new ArrayList<Integer>();
