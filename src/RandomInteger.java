@@ -1,25 +1,27 @@
-import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public final class RandomInteger {
 
 	public static void createFile() {
 		try{
-			
-			PrintWriter writer = new PrintWriter("random-ints.txt", "UTF-8");
-			int num;
-		    int[] dist = new int[10]; 
-
-		    for (int x = 0; x < 10000; x++) {
-		      num = (int) (Math.floor(Math.random() * 10));
-		      dist[num]++;
-		      writer.println(num);
+			PrintStream writer = new PrintStream(
+					new FileOutputStream("random-ints.txt"));
+			System.setOut(writer);
+			ArrayList<Integer> integers = new ArrayList<Integer>();
+		    for (Integer i = 0; i < 10000; i++) {
+		        integers.add(i);
 		    }
-			
+		    Collections.shuffle(integers);
+		    for (Object token : integers) {
+		    	System.out.println(token);
+		    }
+		    
 		}catch(Exception e){
-			
+			System.out.println(e);
 		}
 	}
 }

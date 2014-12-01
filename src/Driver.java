@@ -8,10 +8,14 @@ public class Driver {
 
 	public static final void main(String[] args) {
 
+		
 		long startTime;
 		long endTime;
 		long runTime;
 		ArrayList<Integer> integers;
+		
+		System.out.println("Would you like to generate a new file of integers?");
+		//RandomInteger.createFile();
 
 		try {
 			PrintStream out = new PrintStream(
