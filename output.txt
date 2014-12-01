@@ -1,4 +1,4 @@
-Runtime for Insertion Sort was: 115
-Runtime for Quick Sort was: 39
-Runtime for Merge Sort was: 83
-Runtime for Heap Sort was: 15
+Runtime for Insertion Sort was: 125
+Runtime for Quick Sort was: 46
+Runtime for Merge Sort was: 19
+Runtime for Heap Sort was: 11

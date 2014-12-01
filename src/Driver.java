@@ -1,5 +1,7 @@
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,14 +10,23 @@ public class Driver {
 
 	public static final void main(String[] args) {
 
-		
 		long startTime;
 		long endTime;
 		long runTime;
 		ArrayList<Integer> integers;
-		
-		System.out.println("Would you like to generate a new file of integers?");
-		//RandomInteger.createFile();
+
+		System.out.println("Would you like to generate a new file of integers? (y/n)");
+		String line;
+		try {
+			BufferedReader indata = new BufferedReader(new InputStreamReader(
+					System.in));
+			line = indata.readLine();
+			if (line.equalsIgnoreCase("y")) {
+				RandomInteger.createFile();
+			}
+		} catch (Exception ex) {
+			System.out.println("Error -- " + ex);
+		}
 
 		try {
 			PrintStream out = new PrintStream(
@@ -49,7 +60,7 @@ public class Driver {
 			endTime = System.currentTimeMillis();
 			runTime = ((endTime - startTime));
 			System.out.println("Runtime for Heap Sort was: " + runTime);
-			
+
 		} catch (Exception ex) {
 			System.out.println("Error -- " + ex);
 		}
