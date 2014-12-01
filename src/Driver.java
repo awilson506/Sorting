@@ -25,6 +25,13 @@ public class Driver {
 		runTime = (( endTime - startTime ));
 		System.out.println("Runtime for Quick Sort was: " + runTime);
 		
+		integers = loadArray();
+		startTime = System.currentTimeMillis();
+		MergeSort.mergeSort(integers);
+		endTime = System.currentTimeMillis();
+		runTime = (( endTime - startTime ));
+		System.out.println("Runtime for Merge Sort was: " + runTime);
+		
 	}
 	
 	public static ArrayList<Integer> loadArray(){
