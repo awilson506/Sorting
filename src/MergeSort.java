@@ -4,15 +4,11 @@ public class MergeSort {
 
 	public static void mergeSort(ArrayList<Integer> input) {
 		
-		
 		if (input.size() > 1) {
-			
 			ArrayList<Integer> left = left(input);
 			ArrayList<Integer> right = right(input);
-			
 			mergeSort(left);
 			mergeSort(right);
-
 			merge(input, left, right);
 		}
 	}

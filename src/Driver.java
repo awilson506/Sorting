@@ -45,6 +45,7 @@ public class Driver {
 			endTime = System.currentTimeMillis();
 			runTime = ((endTime - startTime));
 			System.out.println("Runtime for Heap Sort was: " + runTime);
+			
 		} catch (Exception ex) {
 			System.out.println("Error -- " + ex);
 		}
