@@ -65,8 +65,8 @@ public class Driver {
 			}
 			sc.close();
 
-		} catch (Exception e) {
-			System.out.println("Error -- " + e);
+		} catch (Exception ex) {
+			System.out.println("Error -- " + ex);
 		}
 		return integers;
 	}
