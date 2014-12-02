@@ -24,26 +24,21 @@ public class QuickSort {
 				greater.add(input.get(i));
 			}
 		}
-
 		return join(quicksort(less), pivot, quicksort(greater));
 	}
 
-	private static ArrayList<Integer> join(ArrayList<Integer> less,
-			int pivot, ArrayList<Integer> greater) {
+	private static ArrayList<Integer> join(ArrayList<Integer> less, int pivot,
+			ArrayList<Integer> greater) {
 
 		ArrayList<Integer> list = new ArrayList<Integer>();
-
 		for (int i = 0; i < less.size(); i++) {
 			list.add(less.get(i));
 		}
-
+		
 		list.add(pivot);
-
 		for (int i = 0; i < greater.size(); i++) {
 			list.add(greater.get(i));
 		}
-
 		return list;
 	}
-
 }
